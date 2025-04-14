@@ -95,5 +95,5 @@ const langDataRegistry = new Map([
 });
 
 app.listen(PORT, () => {
-  console.log(`✅ Fake Translator API running on http://localhost:${PORT}`);
+  console.log(`✅ Fake Translator API running on http://localhost:2800`);
 });
