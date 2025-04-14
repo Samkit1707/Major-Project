@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trust Translate - Features</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(135deg, #0d0d0d, #1e1e1e);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 40px;
+      color: #ffad33;
+      text-align: center;
+    }
+
+    .card-container {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 30px 25px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(255, 173, 51, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 30px rgba(255, 173, 51, 0.3);
+    }
+
+    .card h2 {
+      font-size: 1.6rem;
+      color: #ffad33;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    .card button {
+      background-color: #ffad33;
+      border: none;
+      color: #1e1e1e;
+      padding: 10px 20px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .card button:hover {
+      background-color: #e69500;
+    }
+
+    @media (max-width: 700px) {
+      .card-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Choose a Feature</h1>
+  <div class="card-container">
+    <div class="card">
+      <h2>Language Translator</h2>
+      <p>Translate text instantly into any language you desire with high accuracy and speed.</p>
+      <button onclick="goToTranslator()">Start Translating</button>
+    </div>
+
+    <div class="card">
+      <h2>Email Spam Detector</h2>
+      <p>Detect and filter spam messages or emails with smart AI-based detection tools.</p>
+      <button onclick="goToSpamDetector()">Check for Spam</button>
+    </div>
+  </div>
+
+  <script>
+    function goToTranslator() {
+      window.location.href = "index.html";
+    }
+
+    function goToSpamDetector() {
+      window.location.href = "spam-detector.html";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trust Translate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(135deg, #0d0d0d, #1e1e1e);
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: #ffad33;
+    }
+
+    nav a {
+      color: #eee;
+      text-decoration: none;
+      margin-left: 24px;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffad33;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 20px 60px;
+      text-align: center;
+      background: url('https://images.unsplash.com/photo-1610878180933-5b1f65a4d5ff?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 0;
+    }
+
+    .hero-content {
+      z-index: 1;
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 20px;
+      animation: fadeInDown 1s ease forwards;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #ddd;
+      margin-bottom: 40px;
+      animation: fadeInUp 1.5s ease forwards;
+    }
+
+    .cta-button {
+      padding: 14px 36px;
+      font-size: 1rem;
+      font-weight: 600;
+      background-color: #ffad33;
+      color: #1e1e1e;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(255, 173, 51, 0.4);
+      animation: fadeInUp 2s ease forwards;
+    }
+
+    .cta-button:hover {
+      background-color: #e69500;
+      box-shadow: 0 6px 20px rgba(255, 173, 51, 0.6);
+    }
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Trust Translate</div>
+    <nav>
+      <a href="#login">Login</a>
+      <a href="#signup">Sign Up</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Trust Translate</h1>
+      <p>
+        Break language barriers with ease. Translate to any language effortlessly and detect spam in messages or emails using intelligent AI. Designed for clarity, security, and accessibility.
+      </p>
+      <button class="cta-button" onclick="getStarted()">Get Started</button>
+    </div>
+  </section>
+
+  <script>
+    function getStarted() {
+      window.location.href = 'get.html';
+    }
+  </script>
+</body>
+</html>
